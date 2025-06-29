@@ -1,0 +1,53 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="audioGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="uiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#212529">Plugin Threading Model</text>
+  
+  <!-- Audio Thread -->
+  <rect x="50" y="70" width="300" height="120" fill="url(#audioGradient)" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="200" y="90" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">Audio Thread (Real-time)</text>
+  <text x="60" y="110" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">• processBlock()</text>
+  <text x="60" y="125" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">• MIDI processing</text>
+  <text x="60" y="140" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">• Voice synthesis</text>
+  <text x="60" y="155" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">• Parameter smoothing</text>
+  <text x="60" y="170" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">• NO allocations/locks</text>
+  
+  <!-- UI Thread -->
+  <rect x="450" y="70" width="300" height="120" fill="url(#uiGradient)" stroke="#2196f3" stroke-width="2" rx="5"/>
+  <text x="600" y="90" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565c0">UI Thread (Non-real-time)</text>
+  <text x="460" y="110" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">• User interaction</text>
+  <text x="460" y="125" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">• Parameter changes</text>
+  <text x="460" y="140" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">• Preset loading</text>
+  <text x="460" y="155" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">• File I/O</text>
+  <text x="460" y="170" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">• Graphics rendering</text>
+  
+  <!-- Communication -->
+  <rect x="250" y="220" width="300" height="80" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ef6c00">Thread Communication</text>
+  <text x="260" y="260" font-family="Arial, sans-serif" font-size="10" fill="#ef6c00">• Atomic parameters (lock-free)</text>
+  <text x="260" y="275" font-family="Arial, sans-serif" font-size="10" fill="#ef6c00">• AsyncUpdater for UI notifications</text>
+  <text x="260" y="290" font-family="Arial, sans-serif" font-size="10" fill="#ef6c00">• MessageManager for thread safety</text>
+  
+  <!-- Sync indicators -->
+  <circle cx="200" cy="340" r="8" fill="#4caf50"/>
+  <text x="220" y="345" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">Real-time priority</text>
+  
+  <circle cx="600" cy="340" r="8" fill="#2196f3"/>
+  <text x="620" y="345" font-family="Arial, sans-serif" font-size="10" fill="#1565c0">Normal priority</text>
+  
+  <rect x="350" y="330" width="100" height="20" fill="#ff9800" rx="10"/>
+  <text x="400" y="343" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="white">Lock-free sync</text>
+</svg>

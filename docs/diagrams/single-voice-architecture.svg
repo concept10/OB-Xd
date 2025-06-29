@@ -1,0 +1,125 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#212529">Single Voice Detailed Architecture</text>
+  
+  <!-- MIDI Note Input -->
+  <rect x="50" y="80" width="80" height="30" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" rx="3"/>
+  <text x="90" y="95" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#8e24aa">MIDI Note</text>
+  <text x="90" y="105" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#8e24aa">Note + Velocity</text>
+  
+  <!-- Portamento -->
+  <rect x="170" y="80" width="80" height="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="3"/>
+  <text x="210" y="95" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#7b1fa2">Portamento</text>
+  <text x="210" y="105" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#7b1fa2">Pitch Glide</text>
+  
+  <!-- Pitch Modulation Sources -->
+  <rect x="50" y="140" width="200" height="80" fill="#ffebee" stroke="#f44336" stroke-width="1" rx="5"/>
+  <text x="150" y="160" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#f44336">Pitch Modulation</text>
+  <text x="60" y="180" font-family="Arial, sans-serif" font-size="9" fill="#f44336">• Pitch Wheel (±2/12 ST)</text>
+  <text x="60" y="195" font-family="Arial, sans-serif" font-size="9" fill="#f44336">• LFO Amount</text>
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="9" fill="#f44336">• Vibrato LFO</text>
+  
+  <!-- Oscillator Section -->
+  <rect x="300" y="80" width="250" height="140" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="425" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#d32f2f">Oscillator Block</text>
+  
+  <!-- OSC 1 details -->
+  <rect x="310" y="110" width="100" height="50" fill="#ffffff" stroke="#d32f2f" stroke-width="1" rx="3"/>
+  <text x="360" y="125" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#d32f2f">OSC 1</text>
+  <text x="360" y="135" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">Saw/Pulse</text>
+  <text x="360" y="145" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">Pitch ±24ST</text>
+  <text x="360" y="155" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">PW: 0-95%</text>
+  
+  <!-- OSC 2 details -->
+  <rect x="420" y="110" width="100" height="50" fill="#ffffff" stroke="#d32f2f" stroke-width="1" rx="3"/>
+  <text x="470" y="125" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#d32f2f">OSC 2</text>
+  <text x="470" y="135" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">Saw/Pulse</text>
+  <text x="470" y="145" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">Detune ±0.6</text>
+  <text x="470" y="155" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">Hard Sync</text>
+  
+  <!-- Cross Modulation -->
+  <rect x="310" y="170" width="100" height="25" fill="#ffe0e0" stroke="#d32f2f" stroke-width="1" rx="3"/>
+  <text x="360" y="180" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#d32f2f">Cross Mod</text>
+  <text x="360" y="190" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">OSC1→OSC2</text>
+  
+  <!-- Noise -->
+  <rect x="420" y="170" width="100" height="25" fill="#ffe0e0" stroke="#d32f2f" stroke-width="1" rx="3"/>
+  <text x="470" y="180" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#d32f2f">Noise Gen</text>
+  <text x="470" y="190" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#d32f2f">White/Pink</text>
+  
+  <!-- Mixer Section -->
+  <rect x="350" y="250" width="100" height="50" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#ff9800">MIXER</text>
+  <text x="400" y="285" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#ff9800">OSC1 + OSC2 + Noise</text>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#ff9800">Individual levels</text>
+  
+  <!-- Filter Section -->
+  <rect x="500" y="340" width="150" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="575" y="360" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#388e3c">FILTER</text>
+  <text x="575" y="375" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#388e3c">Multimode SVF</text>
+  <text x="510" y="390" font-family="Arial, sans-serif" font-size="8" fill="#388e3c">• 12dB: HP→BP→LP</text>
+  <text x="510" y="405" font-family="Arial, sans-serif" font-size="8" fill="#388e3c">• 24dB: 4-pole cascade</text>
+  <text x="510" y="420" font-family="Arial, sans-serif" font-size="8" fill="#388e3c">• Resonance: 0-99%</text>
+  <text x="510" y="435" font-family="Arial, sans-serif" font-size="8" fill="#388e3c">• Self-oscillation</text>
+  
+  <!-- Filter Modulation -->
+  <rect x="250" y="340" width="200" height="80" fill="#ffe0b2" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="350" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#f57c00">Filter Modulation</text>
+  <text x="260" y="380" font-family="Arial, sans-serif" font-size="8" fill="#f57c00">• Filter Envelope (ADSR)</text>
+  <text x="260" y="395" font-family="Arial, sans-serif" font-size="8" fill="#f57c00">• Keyboard Follow</text>
+  <text x="260" y="410" font-family="Arial, sans-serif" font-size="8" fill="#f57c00">• LFO Amount</text>
+  
+  <!-- VCA Section -->
+  <rect x="700" y="370" width="100" height="60" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="750" y="390" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#4caf50">VCA</text>
+  <text x="750" y="405" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#4caf50">Amp Envelope</text>
+  <text x="750" y="415" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#4caf50">Velocity Sens</text>
+  <text x="750" y="425" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#4caf50">Final Level</text>
+  
+  <!-- Envelope Section -->
+  <rect x="50" y="460" width="300" height="80" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="200" y="480" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ff9800">Dual ADSR Envelopes</text>
+  
+  <!-- Amp Envelope -->
+  <rect x="60" y="490" width="120" height="40" fill="#ffffff" stroke="#ff9800" stroke-width="1" rx="3"/>
+  <text x="120" y="505" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#ff9800">Amplitude ENV</text>
+  <text x="120" y="515" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#ff9800">A: 4ms-60s</text>
+  <text x="120" y="525" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#ff9800">D/R: 4ms-60s</text>
+  
+  <!-- Filter Envelope -->
+  <rect x="190" y="490" width="120" height="40" fill="#ffffff" stroke="#ff9800" stroke-width="1" rx="3"/>
+  <text x="250" y="505" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#ff9800">Filter ENV</text>
+  <text x="250" y="515" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#ff9800">A: 1ms-60s</text>
+  <text x="250" y="525" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#ff9800">D/R: 1ms-60s</text>
+  
+  <!-- Signal flow arrows -->
+  <line x1="130" y1="95" x2="170" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="250" y1="95" x2="300" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="425" y1="220" x2="400" y2="250" stroke="#333" stroke-width="3" marker-end="url(#arrowhead2)"/>
+  <line x1="400" y1="300" x2="500" y2="380" stroke="#333" stroke-width="3" marker-end="url(#arrowhead2)"/>
+  <line x1="650" y1="390" x2="700" y2="390" stroke="#333" stroke-width="3" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Modulation arrows -->
+  <line x1="250" y1="180" x2="300" y2="150" stroke="#f44336" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowhead2)"/>
+  <line x1="350" y1="380" x2="500" y2="380" stroke="#f57c00" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="120" y1="530" x2="700" y2="420" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Micro-detuning section -->
+  <rect x="600" y="80" width="250" height="120" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="725" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Analog Character</text>
+  <text x="610" y="120" font-family="Arial, sans-serif" font-size="9" fill="#333">• Voice Detuning (0-90¢)</text>
+  <text x="610" y="135" font-family="Arial, sans-serif" font-size="9" fill="#333">• Filter Detuning (0-18¢)</text>
+  <text x="610" y="150" font-family="Arial, sans-serif" font-size="9" fill="#333">• Envelope Detuning</text>
+  <text x="610" y="165" font-family="Arial, sans-serif" font-size="9" fill="#333">• Portamento Detuning</text>
+  <text x="610" y="180" font-family="Arial, sans-serif" font-size="9" fill="#333">• Level Detuning (±67%)</text>
+  <text x="610" y="195" font-family="Arial, sans-serif" font-size="8" fill="#666">Random per voice for warmth</text>
+</svg>

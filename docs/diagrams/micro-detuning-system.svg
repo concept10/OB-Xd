@@ -1,0 +1,60 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="detuneGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#212529">Micro-Detuning System</text>
+  
+  <!-- Voice Detune -->
+  <rect x="50" y="70" width="140" height="80" fill="url(#detuneGradient)" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="120" y="90" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#f57c00">Voice Detune</text>
+  <text x="120" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#f57c00">0 - 90 cents</text>
+  <text x="120" y="120" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">Oscillator pitch</text>
+  <text x="120" y="135" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">variation</text>
+  
+  <!-- Filter Detune -->
+  <rect x="210" y="70" width="140" height="80" fill="url(#detuneGradient)" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="280" y="90" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#f57c00">Filter Detune</text>
+  <text x="280" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#f57c00">0 - 18 cents</text>
+  <text x="280" y="120" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">Cutoff frequency</text>
+  <text x="280" y="135" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">variation</text>
+  
+  <!-- Envelope Detune -->
+  <rect x="370" y="70" width="140" height="80" fill="url(#detuneGradient)" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="440" y="90" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#f57c00">Envelope Detune</text>
+  <text x="440" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#f57c00">±30% timing</text>
+  <text x="440" y="120" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">ADSR speed</text>
+  <text x="440" y="135" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">variation</text>
+  
+  <!-- Level Detune -->
+  <rect x="530" y="70" width="140" height="80" fill="url(#detuneGradient)" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="600" y="90" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#f57c00">Level Detune</text>
+  <text x="600" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#f57c00">±67% amplitude</text>
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">Voice volume</text>
+  <text x="600" y="135" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#f57c00">variation</text>
+  
+  <!-- Algorithm explanation -->
+  <rect x="50" y="180" width="700" height="180" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+  <text x="60" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#212529">Algorithm Details:</text>
+  
+  <text x="70" y="230" font-family="Arial, sans-serif" font-size="11" fill="#495057">Per-Voice Random Initialization:</text>
+  <text x="80" y="250" font-family="Courier New, monospace" font-size="9" fill="#007bff">levelDetune = Random::getSystemRandom().nextFloat() - 0.5f;</text>
+  <text x="80" y="265" font-family="Courier New, monospace" font-size="9" fill="#007bff">// Range: -0.5 to +0.5 for each voice</text>
+  
+  <text x="70" y="290" font-family="Arial, sans-serif" font-size="11" fill="#495057">Real-time Application:</text>
+  <text x="80" y="310" font-family="Courier New, monospace" font-size="9" fill="#007bff">float detunedPitch = basePitch + (voiceDetune * detuneAmount);</text>
+  <text x="80" y="325" font-family="Courier New, monospace" font-size="9" fill="#007bff">float detunedCutoff = baseCutoff + (filterDetune * filterDetuneAmt);</text>
+  
+  <text x="70" y="350" font-family="Arial, sans-serif" font-size="11" fill="#495057">Result: Each voice has slightly different characteristics, creating:</text>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-size="10" fill="#495057">• Organic, non-mechanical sound</text>
+  <text x="350" y="370" font-family="Arial, sans-serif" font-size="10" fill="#495057">• Stereo width and movement</text>
+  <text x="80" y="385" font-family="Arial, sans-serif" font-size="10" fill="#495057">• Analog warmth and character</text>
+  <text x="350" y="385" font-family="Arial, sans-serif" font-size="10" fill="#495057">• Reduced phase cancellation</text>
+</svg>

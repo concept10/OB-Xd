@@ -1,0 +1,118 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1976d2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="engineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f57c00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="guiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4caf50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#212529">Source Code Architecture</text>
+  
+  <!-- Core Plugin Layer -->
+  <rect x="50" y="70" width="800" height="120" fill="url(#coreGradient)" stroke="#1976d2" stroke-width="2" rx="10"/>
+  <text x="450" y="95" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1976d2">Core Plugin Layer</text>
+  
+  <!-- Core files -->
+  <rect x="80" y="110" width="150" height="60" fill="#ffffff" stroke="#1976d2" stroke-width="1" rx="5"/>
+  <text x="155" y="130" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#1976d2">PluginProcessor</text>
+  <text x="155" y="145" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1976d2">(.h/.cpp)</text>
+  <text x="155" y="160" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Audio processing</text>
+  
+  <rect x="250" y="110" width="150" height="60" fill="#ffffff" stroke="#1976d2" stroke-width="1" rx="5"/>
+  <text x="325" y="130" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#1976d2">PluginEditor</text>
+  <text x="325" y="145" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1976d2">(.h/.cpp)</text>
+  <text x="325" y="160" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">User interface</text>
+  
+  <rect x="420" y="110" width="150" height="60" fill="#ffffff" stroke="#1976d2" stroke-width="1" rx="5"/>
+  <text x="495" y="130" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#1976d2">Utils</text>
+  <text x="495" y="145" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1976d2">(.h/.cpp)</text>
+  <text x="495" y="160" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Helper functions</text>
+  
+  <!-- DSP Engine Layer -->
+  <rect x="50" y="220" width="800" height="180" fill="url(#engineGradient)" stroke="#f57c00" stroke-width="2" rx="10"/>
+  <text x="450" y="245" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#f57c00">DSP Engine Layer</text>
+  
+  <!-- Engine files row 1 -->
+  <rect x="80" y="260" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="140" y="280" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">SynthEngine</text>
+  <text x="140" y="295" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Main synthesis</text>
+  
+  <rect x="220" y="260" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="280" y="280" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">Motherboard</text>
+  <text x="280" y="295" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Voice management</text>
+  
+  <rect x="360" y="260" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="420" y="280" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">ObxdVoice</text>
+  <text x="420" y="295" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Individual voice</text>
+  
+  <rect x="500" y="260" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="560" y="280" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">VoiceQueue</text>
+  <text x="560" y="295" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Voice allocation</text>
+  
+  <rect x="640" y="260" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="700" y="280" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">Params/ParamEnum</text>
+  <text x="700" y="295" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Parameter definitions</text>
+  
+  <!-- Engine files row 2 -->
+  <rect x="80" y="330" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="140" y="350" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">Filter</text>
+  <text x="140" y="365" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">State variable filter</text>
+  
+  <rect x="220" y="330" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="280" y="350" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">Oscillators</text>
+  <text x="280" y="365" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">SawOsc, PulseOsc</text>
+  
+  <rect x="360" y="330" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="420" y="350" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">AdsrEnvelope</text>
+  <text x="420" y="365" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">ADSR implementation</text>
+  
+  <rect x="500" y="330" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="560" y="350" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">Lfo</text>
+  <text x="560" y="365" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Low frequency osc</text>
+  
+  <rect x="640" y="330" width="120" height="50" fill="#ffffff" stroke="#f57c00" stroke-width="1" rx="3"/>
+  <text x="700" y="350" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#f57c00">AudioUtils</text>
+  <text x="700" y="365" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">DSP utilities</text>
+  
+  <!-- GUI Layer -->
+  <rect x="50" y="430" width="800" height="120" fill="url(#guiGradient)" stroke="#4caf50" stroke-width="2" rx="10"/>
+  <text x="450" y="455" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4caf50">GUI Components Layer</text>
+  
+  <!-- GUI components -->
+  <rect x="80" y="470" width="120" height="60" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="140" y="490" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#4caf50">Knob</text>
+  <text x="140" y="505" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Rotary controls</text>
+  <text x="140" y="520" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Parameter binding</text>
+  
+  <rect x="220" y="470" width="120" height="60" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="280" y="490" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#4caf50">Buttons</text>
+  <text x="280" y="505" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Toggle/Image</text>
+  <text x="280" y="520" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Switch controls</text>
+  
+  <rect x="360" y="470" width="120" height="60" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="420" y="490" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#4caf50">PresetBar</text>
+  <text x="420" y="505" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Preset browser</text>
+  <text x="420" y="520" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Bank management</text>
+  
+  <rect x="500" y="470" width="120" height="60" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="560" y="490" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#4caf50">ScaleComponent</text>
+  <text x="560" y="505" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Tuning systems</text>
+  <text x="560" y="520" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">MTS-ESP support</text>
+  
+  <rect x="640" y="470" width="120" height="60" fill="#ffffff" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="700" y="490" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#4caf50">SetPresetName</text>
+  <text x="700" y="505" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">Naming dialog</text>
+  <text x="700" y="520" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">User input</text>
+</svg>

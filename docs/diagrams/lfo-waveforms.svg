@@ -1,0 +1,69 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lfoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f3e5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9c27b0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#212529">LFO Waveform Implementation</text>
+  
+  <!-- Sine Wave -->
+  <rect x="50" y="70" width="200" height="120" fill="url(#lfoGradient)" stroke="#9c27b0" stroke-width="1" rx="5"/>
+  <text x="150" y="90" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#9c27b0">Sine Wave</text>
+  
+  <!-- Sine curve -->
+  <path d="M 70,130 Q 110,110 150,130 Q 190,150 230,130" 
+        fill="none" stroke="#6a1b9a" stroke-width="3"/>
+  <text x="150" y="175" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#6a1b9a">sin(2π × phase)</text>
+  
+  <!-- Square Wave -->
+  <rect x="300" y="70" width="200" height="120" fill="url(#lfoGradient)" stroke="#9c27b0" stroke-width="1" rx="5"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#9c27b0">Square Wave</text>
+  
+  <!-- Square curve -->
+  <path d="M 320,110 L 380,110 L 380,150 L 440,150 L 440,110 L 480,110" 
+        fill="none" stroke="#6a1b9a" stroke-width="3"/>
+  <text x="400" y="175" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#6a1b9a">phase &lt; 0.5 ? 1 : -1</text>
+  
+  <!-- Sample & Hold -->
+  <rect x="550" y="70" width="200" height="120" fill="url(#lfoGradient)" stroke="#9c27b0" stroke-width="1" rx="5"/>
+  <text x="650" y="90" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#9c27b0">Sample &amp; Hold</text>
+  
+  <!-- S&H curve -->
+  <path d="M 570,120 L 590,120 L 590,140 L 610,140 L 610,115 L 630,115 L 630,145 L 650,145 L 650,125 L 670,125 L 670,135 L 690,135 L 690,110 L 710,110 L 710,150 L 730,150" 
+        fill="none" stroke="#6a1b9a" stroke-width="3"/>
+  <text x="650" y="175" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#6a1b9a">Random sample on trigger</text>
+  
+  <!-- Blended waveforms -->
+  <rect x="50" y="220" width="700" height="120" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#212529">Waveform Blending</text>
+  <text x="60" y="270" font-family="Arial, sans-serif" font-size="11" fill="#495057">Multiple waveforms can be active simultaneously:</text>
+  <text x="70" y="290" font-family="Courier New, monospace" font-size="10" fill="#007bff">float output = 0.0f;</text>
+  <text x="70" y="305" font-family="Courier New, monospace" font-size="10" fill="#007bff">if (waveForm &amp; 1) output += sineWave();</text>
+  <text x="70" y="320" font-family="Courier New, monospace" font-size="10" fill="#007bff">if (waveForm &amp; 2) output += squareWave();</text>
+  <text x="70" y="335" font-family="Courier New, monospace" font-size="10" fill="#007bff">if (waveForm &amp; 4) output += sampleHold();</text>
+  
+  <!-- Routing matrix -->
+  <rect x="50" y="360" width="700" height="120" fill="#e8f5e8" stroke="#4caf50" stroke-width="1" rx="5"/>
+  <text x="400" y="385" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#4caf50">LFO Routing Matrix</text>
+  
+  <!-- Destinations -->
+  <text x="70" y="410" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Destinations:</text>
+  <text x="90" y="430" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• OSC 1 Pitch (±60 semitones)</text>
+  <text x="90" y="445" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• OSC 2 Pitch (±60 semitones)</text>
+  <text x="90" y="460" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Filter Cutoff (±140 units)</text>
+  
+  <text x="350" y="430" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Pulse Width 1 (±85%)</text>
+  <text x="350" y="445" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Pulse Width 2 (±85%)</text>
+  <text x="350" y="460" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Separate amount controls</text>
+  
+  <text x="570" y="410" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Sync Options:</text>
+  <text x="590" y="430" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Free-running (0.1 - 50 Hz)</text>
+  <text x="590" y="445" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Host tempo sync</text>
+  <text x="590" y="460" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">• Retrigger on note</text>
+</svg>

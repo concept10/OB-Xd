@@ -1,0 +1,52 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="envGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffe0b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#212529">ADSR Envelope Implementation</text>
+  
+  <!-- Envelope curve -->
+  <rect x="50" y="70" width="700" height="250" fill="url(#envGradient)" stroke="#ff9800" stroke-width="2" rx="5"/>
+  
+  <!-- Axes -->
+  <line x1="80" y1="300" x2="720" y2="300" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="300" x2="80" y2="100" stroke="#333" stroke-width="2"/>
+  
+  <!-- Envelope curve -->
+  <path d="M 80,300 L 160,120 L 300,180 L 500,180 L 650,300" 
+        fill="none" stroke="#d84315" stroke-width="4"/>
+  
+  <!-- Phase labels -->
+  <text x="120" y="340" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#d84315">Attack</text>
+  <text x="230" y="340" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#d84315">Decay</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#d84315">Sustain</text>
+  <text x="575" y="340" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#d84315">Release</text>
+  
+  <!-- Time markers -->
+  <line x1="160" y1="300" x2="160" y2="310" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="300" x2="300" y2="310" stroke="#333" stroke-width="1"/>
+  <line x1="500" y1="300" x2="500" y2="310" stroke="#333" stroke-width="1"/>
+  <line x1="650" y1="300" x2="650" y2="310" stroke="#333" stroke-width="1"/>
+  
+  <!-- Level markers -->
+  <line x1="70" y1="120" x2="80" y2="120" stroke="#333" stroke-width="1"/>
+  <line x1="70" y1="180" x2="80" y2="180" stroke="#333" stroke-width="1"/>
+  <text x="65" y="125" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#333">1.0</text>
+  <text x="65" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#333">S</text>
+  <text x="65" y="305" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#333">0</text>
+  
+  <!-- Note events -->
+  <text x="80" y="90" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">Note On</text>
+  <text x="500" y="90" font-family="Arial, sans-serif" font-size="10" fill="#c62828">Note Off</text>
+  
+  <!-- Vertical lines for note events -->
+  <line x1="80" y1="100" x2="80" y2="300" stroke="#2e7d32" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="500" y1="100" x2="500" y2="300" stroke="#c62828" stroke-width="1" stroke-dasharray="5,5"/>
+</svg>
